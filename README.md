@@ -17,7 +17,7 @@ exemple de routes :
   localhost:4200/start/12345654321 -> OK  
 
 ## Etape 4 : Recupération d'un flux http
-Créer un composant qui va afficher une liste de palindone herbergé ici :  
+Créer un composant qui va afficher une liste de palindone herbergé ici :  /src/assets/flux.json
 Afficher les ligne de palindrome valide en vert et invalide en rouge
 
 
