@@ -1,6 +1,7 @@
 # TEST ANGULAR 
 
-Ce test a pour but de tester la les éléments de base d'Angular.
+Le test a pour but de tester la les éléments de base d'Angular.
+Le test peut etre envoyé par mail (sans les node_modules), ou en faisant une PR sur ce repo.
 
 ## Etape 1
 Créer une application angular Standard avec @angular/cli
