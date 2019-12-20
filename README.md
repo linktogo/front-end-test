@@ -23,5 +23,5 @@ Afficher les ligne de palindrome valide en vert et invalide en rouge
 
 
 ## Etape 5 : Tester c'est douter
-La commande "npm test" doit etre passante et tester votre code
+La commande "npm test" doit etre passante et tester votre code  
 Le fichier .gitlab-ci.yml vous permet de lancer les tests automatiquement
