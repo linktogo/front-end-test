@@ -1,0 +1,74 @@
+image: node:10-slim
+
+services:
+  - redis:latest
+
+cache:
+  paths:
+  - node_modules/
+  
+stages:
+  - install
+  - prebuild
+  - build
+  - test
+  - deploy
+  - docker
+  - clean
+
+installapp:
+  stage: install
+  script:
+    - apt-get update -qq && apt-get install -y -qq bzip2
+    - npm install @angular/cli
+    - npm install
+
+lintapp:
+  stage: prebuild
+  script:
+    - npm run lint
+  except:
+    - deploy
+
+testkarma:
+  stage: prebuild
+  image: trion/ng-cli-karma:8.3.5
+  allow_failure: false
+  script:
+  - npm test
+
+
+duplicateapp:
+  stage: prebuild
+  script:
+    - npm run quality:default
+  except:
+    - deploy
+
+
+buildappdev:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - ./dist/**
+  except:
+    - deploy
+    - master
+
+buildapp:
+  stage: build
+  script:
+    - npm run build:prod
+  artifacts:
+    paths:
+        - ./dist/**
+  except:
+    - deploy
+   
+cleanup:
+  stage: clean
+  script:
+  - rm -rf ./dist
+  - rm -rf ./node_modules
