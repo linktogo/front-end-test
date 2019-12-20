@@ -22,4 +22,6 @@ Créer un composant qui va afficher une liste de palindone herbergé ici :  http
 Afficher les ligne de palindrome valide en vert et invalide en rouge
 
 
+## Etape 5 : Tester c'est douter
+La commande "npm test" doit etre passante et tester votre code.
 
