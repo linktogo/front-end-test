@@ -18,8 +18,8 @@ exemple de routes :
   localhost:4200/start/12345654321 -> OK  
 
 ## Etape 4 : Recupération d'un flux http
-Créer un composant qui va afficher une liste de palindone herbergé ici :  https://www.linktogo.fr/assets/json/fluxpalindrome.json  
-Afficher les ligne de palindrome valide en vert et invalide en rouge
+Créer un composant qui va afficher une liste de palindone herbergé ici :  assets/flux.json ou https://www.linktogo.fr/assets/json/fluxpalindrome.json
+Afficher les lignes de palindrome valide en vert et invalide en rouge
 
 
 ## Etape 5 : Tester c'est douter
